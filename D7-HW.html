@@ -52,28 +52,30 @@
   <div class="mt-5">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownbtn" >Select User By</button>
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownbtn" style="min-width:110px">Sort By</button>
         <div class="dropdown-menu">
-          <option class="dropdown-item" href="#" onclick="getDropDownValue(event)">Name</option>
+          <option class="dropdown-item" href="#" >Name</option>
           <div role="separator" class="dropdown-divider"></div>
-          <option class="dropdown-item" href="#" onclick="getDropDownValue(event)">Username</option>
+          <option class="dropdown-item" href="#" >Username</option>
           <div role="separator" class="dropdown-divider"></div>
-          <option class="dropdown-item" href="#" onclick="getDropDownValue(event)">Email</option>
+          <option class="dropdown-item" href="#" >Email</option>
         </div>
       </div>
-      <input type="text" class="form-control" aria-label="Text input with dropdown button">
+      <input type="text" id="search-input"  class="form-control" aria-label="Text input with dropdown button" placeholder="Search Database">
     </div>
   </div>
 
-    <table class="table table-striped">
+    <table class="table table-striped table-responsive">
       <thead>
-        <tr>
+        <tr >
           <th scope="col">#ID</th>
           <th scope="col">Name</th>
           <th scope="col">Username</th>
           <th scope="col">Email</th>
-          <th scope="col" class="w-auto">Address</th>
-
+          <th scope="col">Phone</th>
+          <th scope="col">Address</th>
+          <th scope="col">Zip Code</th>
+        
         </tr>
       </thead>
       <tbody id="user-details">
