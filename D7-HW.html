@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<!-- saved from url=(0436)https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/297116644544024.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2TAWW44RDWPS6YGR%2F20210420%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210420T122944Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27M3-D7.html&X-Amz-Signature=c6ce825f6980a9361213a8a3527f414d4bf088404a705c0996a149b42c1f94fc -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+  <head>
     <!-- Required meta tags -->
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./D7-HW_files/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
     <!--
       PAIR PROGRAMMING EXERCISE.
       1 DRIVER, 1 NAVIGATOR.
       1 Exercise each. Use GitHub to share the code.
       Less exercise, more complicated. 
-      Ex1) Get and present, using async / await pattern the users from: https://jsonplaceholder.typicode.com/users 
+      Ex1) Get and display, using an asynchronous pattern, the users from: https://jsonplaceholder.typicode.com/users 
+      
+      
+      
       Ex2) Create a dropdown (<select>) that allows the user to select between name, username and email. 
            Create then a filter. When the user types in something, you should filter the user based on the input and on the value of the select.
            Es.: select on NAME. Filter input = Glenna, only user id number 9 should remain
-      Ex3) Create a function that, from the list of users, extracts only the name
+      Ex3) Create a function that, from the list of users, extracts only the names
       Ex4) Create a function that, from the list of users, creates an array of addresses as string and not as an object. Like:
               {
               "street": "Victor Plains",
@@ -36,10 +47,54 @@
     -->
   </head>
   <body>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./D7-HW_files/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="./D7-HW_files/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script></script>
-  
-</body></html>
+<!-- Image and text -->
+<div class="container">
+  <div class="mt-5">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownbtn" >Select User By</button>
+        <div class="dropdown-menu">
+          <option class="dropdown-item" href="#" onclick="getDropDownValue(event)">Name</option>
+          <div role="separator" class="dropdown-divider"></div>
+          <option class="dropdown-item" href="#" onclick="getDropDownValue(event)">Username</option>
+          <div role="separator" class="dropdown-divider"></div>
+          <option class="dropdown-item" href="#" onclick="getDropDownValue(event)">Email</option>
+        </div>
+      </div>
+      <input type="text" class="form-control" aria-label="Text input with dropdown button">
+    </div>
+  </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">Email</th>
+          <th scope="col" class="w-auto">Address</th>
+
+        </tr>
+      </thead>
+      <tbody id="user-details">
+       
+    
+      </tbody>
+    </table>
+   
+</div>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="HW.js"></script>
+  </body>
+</html>
